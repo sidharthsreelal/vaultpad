@@ -1,4 +1,3 @@
-version 1 features:
+version 1 :
 - basic window
 - that's it
-- only getting started ;)
