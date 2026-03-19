@@ -1,10 +1,8 @@
-# calc-vault
+# vaultpad
 
-A normal-looking calculator. Except it isn't.
+A notepad-adjacent calculator utility. Does basic math. Also mounts encrypted VeraCrypt volumes if you know the right keysequence.
 
-Enter a specific key combo and it'll prompt you for a password, then silently mount a VeraCrypt encrypted volume in the background. Supports a decoy volume too, so you can hand over a "real" password under pressure and nothing sensitive shows up.
-
-Built with Python + tkinter. No dependencies beyond a working VeraCrypt install.
+Looks like a calculator. Acts like a calculator. Just has a second job.
 
 ---
 
@@ -28,11 +26,11 @@ Built with Python + tkinter. No dependencies beyond a working VeraCrypt install.
 **Steps:**
 
 1. Clone or download this repo
-2. Open `calculator.py` and edit the variables at the top of the file (clearly marked)
+2. Open `vaultpad.py` and edit the variables at the top of the file (clearly marked)
 3. Run it:
 
 ```
-python calculator.py
+python vaultpad.py
 ```
 
 That's it.
@@ -55,10 +53,10 @@ DECOY_PASS = "yourfakepassword"
 
 CRYPT_PATH = r"C:\Program Files\VeraCrypt\VeraCrypt.exe"
 
-COMBO_KEYS = ['1', '2', '3', '4', '5', '6']  # trigger sequence
+COMBO_KEYS = ['1', '3', '0', '0', '1', '3', '=']  # trigger sequence
 ```
 
-Change the combo to whatever sequence feels natural to you. Just make sure it's something you'd plausibly type on a calculator so it doesn't look suspicious.
+Change the combo to whatever sequence feels natural to you. Just make sure it's something you'd plausibly type on a calculator so it doesn't look weird.
 
 ---
 
@@ -79,7 +77,7 @@ If you're not familiar with setting this up, the [VeraCrypt documentation](https
 - The calculator remembers the last expression above the main display, like most modern calcs
 - Operator stacking is handled (pressing `+ -` will just replace the `+`)
 - Result display cleans up floats — `4.0` shows as `4`, etc.
-- The window is intentionally not resizable, keeps it looking like a utility app
+- The window is intentionally not resizable, keeps it looking like a plain utility app
 
 ---
 
